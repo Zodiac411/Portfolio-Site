@@ -1,5 +1,7 @@
 import gsap from 'gsap'
 
+const REDUCE_MOTION_STORAGE_KEY = 'chris-folorunso-reduce-motion'
+
 export const MOTION = {
   panelIn: 0.38,
   panelOut: 0.16,
@@ -27,7 +29,7 @@ export function prefersReduced(reduced?: boolean): boolean {
   if (typeof window === 'undefined') return false
   return (
     window.matchMedia('(prefers-reduced-motion: reduce)').matches ||
-    localStorage.getItem('hellstar-reduce-motion') === 'true'
+    localStorage.getItem(REDUCE_MOTION_STORAGE_KEY) === 'true'
   )
 }
 

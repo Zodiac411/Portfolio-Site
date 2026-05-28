@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+const REDUCE_MOTION_STORAGE_KEY = 'chris-folorunso-reduce-motion'
+
 export function useReducedMotion() {
   const [reduced, setReduced] = useState(() => {
     if (typeof window === 'undefined') return false
@@ -20,7 +22,7 @@ export function useMotionPreference() {
   const systemReduced = useReducedMotion()
   const [userReduced, setUserReduced] = useState(() => {
     if (typeof window === 'undefined') return false
-    return localStorage.getItem('hellstar-reduce-motion') === 'true'
+    return localStorage.getItem(REDUCE_MOTION_STORAGE_KEY) === 'true'
   })
 
   const reduced = systemReduced || userReduced
@@ -35,7 +37,7 @@ export function useMotionPreference() {
   const toggleReduced = () => {
     setUserReduced((prev) => {
       const next = !prev
-      localStorage.setItem('hellstar-reduce-motion', String(next))
+      localStorage.setItem(REDUCE_MOTION_STORAGE_KEY, String(next))
       return next
     })
   }

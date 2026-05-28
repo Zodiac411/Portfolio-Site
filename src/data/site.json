@@ -1,14 +1,14 @@
 {
-  "displayName": "HellStar",
+  "displayName": "Chris Folorunso",
   "legalName": "Chris Folorunso",
   "tagline": "Game Designer & Programmer",
-  "email": "hello@hellstar.dev",
+  "email": "",
   "github": "Zodiac411",
   "githubUrl": "https://github.com/Zodiac411",
   "linkedin": "https://www.linkedin.com/in/chris-folorunso/",
   "bio": "Chris Folorunso designs and builds interactive experiences across VR, narrative games, and systems-driven prototypes. Focused on tactile UI, environmental storytelling, and mechanics that reward curiosity.",
   "codingLanguages": ["C++", "C#"],
   "gameEngines": ["Unity", "Unreal Engine 5", "Roblox Studio"],
-  "resumePdf": "/assets/resume/hellstar-resume.pdf",
-  "contactPrimary": ["linkedin", "github", "email"]
+  "resumePdf": "/assets/resume/chris-folorunso-resume.pdf",
+  "contactPrimary": ["linkedin", "github"]
 }

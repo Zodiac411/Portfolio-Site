@@ -124,7 +124,9 @@ export function RouteBackdrop({ word, pathname, transition }: RouteBackdropProps
           x: '-8%',
           opacity: routeClass === 'home' ? 0.06 : 0.04,
           duration:
-            displayWord === 'HELLSTAR' ? MOTION.routeBackdropEnter : MOTION.routeBackdropIn,
+            displayWord === 'CHRIS FOLORUNSO'
+              ? MOTION.routeBackdropEnter
+              : MOTION.routeBackdropIn,
           ease: MOTION.easeOut,
         }
       )

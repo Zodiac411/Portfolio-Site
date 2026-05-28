@@ -1,6 +1,6 @@
-# HellStar Portfolio
+# Chris Folorunso Portfolio
 
-Persona 3 Reload **pause-menu-inspired** portfolio for **HellStar** (Chris Folorunso) — Game Designer & Programmer.
+Persona 3 Reload **pause-menu-inspired** portfolio for **Chris Folorunso** — Game Designer & Programmer.
 
 **Reference video:** [Pause Menu - Persona 3 Reload](https://youtu.be/4d6x1CIgLSc) — layout, motion rhythm, and submenu patterns adapted with **original assets only** (no Atlus/Persona copyrighted art, characters, fonts, or exact UI clones).
 
@@ -41,9 +41,9 @@ Tune staggered menu spacing in `menu.json` (`offsetX`, `offsetY`, `rotate`) and 
 
 ## Placeholders you should fill
 
-1. **Email** — `src/data/site.json` → `email` (currently `hello@hellstar.dev`)
+1. **Email** — `src/data/site.json` → `email`
 2. **Formspree** — copy `.env.example` to `.env` and set `VITE_FORM_ENDPOINT`
-3. **Resume PDF** — add `public/assets/resume/hellstar-resume.pdf`
+3. **Resume PDF** — add `public/assets/resume/chris-folorunso-resume.pdf`
 4. **Gallery** — replace SVG placeholders in `public/assets/gallery/` and update `gallery.json`
 
 ## GitHub projects

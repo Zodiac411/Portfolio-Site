@@ -8,5 +8,5 @@ export const ROUTE_BACKDROP_WORDS: Record<RouteBackdropKey, string> = {
 }
 
 export function backdropWordForPath(pathname: string): string {
-  return ROUTE_BACKDROP_WORDS[pathname as RouteBackdropKey] ?? 'HELLSTAR'
+  return ROUTE_BACKDROP_WORDS[pathname as RouteBackdropKey] ?? 'CHRIS FOLORUNSO'
 }
