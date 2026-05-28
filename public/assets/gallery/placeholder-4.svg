@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#001736"/>
+  <rect x="80" y="100" width="240" height="24" fill="#16cffb" opacity="0.6"/>
+  <rect x="100" y="140" width="200" height="24" fill="#7de6fd" opacity="0.5"/>
+  <rect x="120" y="180" width="160" height="24" fill="#77fefc" opacity="0.4"/>
+  <text x="200" y="50" text-anchor="middle" fill="#f5f8fc" font-family="sans-serif" font-size="18">UI Rhythm</text>
+</svg>

@@ -1,0 +1,29 @@
+{
+  "note": "Replace placeholder paths with your own original or CC0 artwork in public/assets/gallery/",
+  "items": [
+    {
+      "id": "g1",
+      "title": "Interface Study",
+      "src": "/assets/gallery/placeholder-1.svg",
+      "alt": "Abstract cyan interface motif — original artwork placeholder"
+    },
+    {
+      "id": "g2",
+      "title": "Environment Blockout",
+      "src": "/assets/gallery/placeholder-2.svg",
+      "alt": "Teal environment blockout placeholder"
+    },
+    {
+      "id": "g3",
+      "title": "Character Silhouette",
+      "src": "/assets/gallery/placeholder-3.svg",
+      "alt": "Original silhouette study placeholder"
+    },
+    {
+      "id": "g4",
+      "title": "UI Rhythm Board",
+      "src": "/assets/gallery/placeholder-4.svg",
+      "alt": "Menu rhythm layout study placeholder"
+    }
+  ]
+}

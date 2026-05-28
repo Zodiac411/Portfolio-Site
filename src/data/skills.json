@@ -1,0 +1,12 @@
+{
+  "groups": [
+    {
+      "name": "Tools",
+      "skills": [
+        { "name": "Git / GitHub", "level": 88 },
+        { "name": "Blender", "level": 65 },
+        { "name": "VR", "level": 70 }
+      ]
+    }
+  ]
+}

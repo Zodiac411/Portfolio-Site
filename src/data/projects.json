@@ -1,0 +1,97 @@
+{
+  "featured": [
+    {
+      "slug": "Prototype_Z",
+      "name": "Prototype_Z",
+      "description": "Rapid prototyping sandbox for mechanics and interaction experiments.",
+      "tags": ["Unity", "C#"],
+      "featured": true,
+      "preview": "prototype",
+      "role": "Lead Programmer",
+      "systems": ["Player", "Shooting", "Items"],
+      "summary": "Local co-op zombie survival shooter.",
+      "howItWorks": "The player system handles movement, camera facing behavior, grounded movement, and damage response. Shooting is built around a modular weapon setup with ammo, fire modes, reload handling, and weapon specific data, using a pretty clear component style setup. The item system supports pickups, inventory storage, consumables, and item drops, with a bit of event driven flow so the core loop stays focused on survival and looting.",
+      "improvements": "This project would benefit from pushing more of the weapon and item rules into ScriptableObjects, with clearer runtime services for inventory and combat. A bit more use of strategy style weapon handling and cleaner data assets would make balancing easier and cut down on how much logic lives inside single MonoBehaviours.",
+      "partsMade": [
+        "Player controller and movement flow",
+        "Shooting / weapon behavior",
+        "Inventory and item handling"
+      ]
+    },
+    {
+      "slug": "Final_Year_VR_Project",
+      "name": "Final Year VR Project",
+      "description": "Immersive VR capstone exploring presence, comfort, and narrative pacing.",
+      "tags": ["Unity", "C#"],
+      "featured": true,
+      "preview": "vr",
+      "role": "Lead Programmer",
+      "systems": ["Weapons", "Vending Machine", "Zombies"],
+      "summary": "Call of Duty-style zombie wave shooter.",
+      "howItWorks": "Weapons are handled through VR interaction, firing, recoil, reload states, and hit feedback. The vending machine system manages weapon selection, pricing, and spawning, while the zombie systems control AI movement, damage, and death reactions. It leans on state based weapon flow and a data driven shop setup, which makes the buy, fight, survive loop feel pretty smooth in VR.",
+      "improvements": "The next step would be to separate weapon definition data from runtime weapon behavior and unify zombie damage handling behind one shared interface. More use of shared data assets and a cleaner strategy style split for weapon types would also make tuning stuff much faster.",
+      "partsMade": [
+        "VR weapon systems",
+        "Vending machine flow",
+        "Zombie behavior and combat logic"
+      ]
+    },
+    {
+      "slug": "MythGJ",
+      "name": "mythic gamejam",
+      "description": "Myth-inspired game jam build with stylized combat loops.",
+      "tags": ["Unity", "C#"],
+      "featured": true,
+      "preview": "jam",
+      "role": "Lead Programmer",
+      "systems": ["Passengers", "Enemies", "Spawning"],
+      "summary": "Hypercasual dragon party game.",
+      "howItWorks": "Passengers act as a visual health or progression layer for the player and are spawned and removed as the game changes state. Enemies use movement patterns and collision logic to pressure the player, while the spawning system controls when and where threats appear. It uses a nice mix of pooling, movement strategies, and simple wave style spawning, so the arcade loop stays quick and readable.",
+      "improvements": "This project would benefit from moving passenger layout and enemy wave data into reusable assets. A bit more of a scriptable config driven setup would keep the game easy to tune while making the spawn rules and motion patterns more reusable and less messy.",
+      "partsMade": [
+        "Passenger system",
+        "Enemy behavior",
+        "Spawn system"
+      ]
+    },
+    {
+      "slug": "TheBarMan",
+      "name": "TheBarMan",
+      "description": "Bar-management sim focused on systems, timing, and player agency.",
+      "tags": ["Unity", "C#"],
+      "featured": true,
+      "preview": "systems",
+      "role": "Lead Programmer",
+      "systems": ["Bar AI", "State Machine", "Animations", "Queuing and NPCs"],
+      "summary": "Party game where you manage a bar.",
+      "howItWorks": "The bar AI is driven by a custom state machine that moves NPCs between idle, walking, drinking, and combat behavior. Animation logic follows those state changes so characters feel responsive, and queue/route logic organises how NPCs move through the bar space. It's basically a state machine setup with animation syncing and route logic layered on top, which works well for the kind of NPC flow the game wanted.",
+      "improvements": "This project would be stronger with more of the AI tuning moved into ScriptableObjects and with queue behavior formalised as a dedicated system. A cleaner separation between state logic, animation, and queue routing would make the NPC setup easier to extend if more patron types or behavior paths got added later.",
+      "partsMade": [
+        "Bar AI logic",
+        "State machine system",
+        "Animation state syncing",
+        "Queueing and NPC flow"
+      ]
+    },
+    {
+      "slug": "BetterWorldGJ",
+      "name": "BetterWorldGJ",
+      "description": "Game jam prototype about community choices and optimistic futures.",
+      "tags": ["Game Jam", "Narrative"],
+      "featured": true,
+      "preview": "narrative",
+      "role": "Lead Programmer",
+      "systems": ["Whole project"],
+      "summary": "Tower-defense jam tying together building, economy, waves, combat, and UI.",
+      "howItWorks": "This project combines base building, economy, enemy waves, tower placement, combat, and UI into one tower-defense loop. Build tools control where defenses can be placed, the economy tracks credits, enemy systems drive pressure, and the UI keeps the player informed about state and progress. It uses a bunch of smaller systems working together, with mediator style build flow and simple event driven updates holding the whole thing together.",
+      "improvements": "The biggest improvement would be pushing more tower, enemy, wave, and combat data into ScriptableObjects so the game is easier to balance and expand. A cleaner split between build state, economy state, and combat state, plus a bit more use of shared data objects, would also make the project simpler to maintain and less of a headache.",
+      "partsMade": [
+        "Build flow and placement",
+        "Economy and credits",
+        "Enemy AI and spawning",
+        "Tower and combat systems",
+        "UI and scene flow"
+      ]
+    }
+  ]
+}

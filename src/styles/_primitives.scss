@@ -1,0 +1,136 @@
+@use 'tokens';
+
+// Ink/cyan blocks — no pink (pink reserved for menu selector in _menu.scss)
+
+@mixin cmd-block-paper {
+  position: relative;
+  background: var(--paper);
+  border: 1px solid var(--panel-border-cyan);
+  clip-path: var(--clip-corner-cut-sm);
+  box-shadow: var(--shadow-block-ink-only);
+}
+
+@mixin cmd-block-ink {
+  position: relative;
+  background: var(--panel-ink-bg);
+  color: var(--paper);
+  border: 1px solid var(--cyan);
+  clip-path: var(--clip-slant-panel);
+  box-shadow: var(--shadow-block-ink-only);
+}
+
+@mixin cmd-block-compact {
+  position: relative;
+  background: var(--paper);
+  clip-path: var(--clip-corner-cut-sm);
+  border: 1px solid var(--panel-border-cyan);
+  box-shadow: var(--shadow-block-ink-only);
+}
+
+@mixin cmd-block-compact-ink {
+  @include cmd-block-compact;
+  background: var(--panel-ink-bg);
+  color: var(--paper);
+  border-color: var(--cyan);
+  box-shadow: var(--shadow-block-ink-only);
+}
+
+@mixin cmd-chip-flat {
+  display: inline-block;
+  padding: 0.2rem 0.55rem;
+  background: var(--paper);
+  border: 1px solid var(--panel-border-cyan);
+  color: var(--field-blue);
+  font-weight: 600;
+}
+
+@mixin cmd-label-active {
+  font-family: var(--font-menu);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--selector-red-text);
+}
+
+@mixin cmd-label-idle {
+  font-family: var(--font-menu);
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--menu-cyan-1);
+}
+
+@mixin cmd-focus-ring {
+  &:focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 3px;
+  }
+}
+
+@mixin scrollbar-command {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(24, 216, 255, 0.55) rgba(24, 216, 255, 0.12);
+  scrollbar-gutter: stable;
+
+  &::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+  }
+
+  &::-webkit-scrollbar-button {
+    display: none;
+    width: 0;
+    height: 0;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: rgba(2, 4, 11, 0.35);
+    border-left: 1px solid rgba(24, 216, 255, 0.2);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(24, 216, 255, 0.55);
+    border-radius: 0;
+
+    &:hover {
+      background: var(--cyan);
+    }
+  }
+
+  &::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}
+
+%cmd-block-paper {
+  @include cmd-block-paper;
+}
+
+%cmd-block-ink {
+  @include cmd-block-ink;
+}
+
+%cmd-block-compact {
+  @include cmd-block-compact;
+}
+
+%cmd-block-compact-ink {
+  @include cmd-block-compact-ink;
+}
+
+%cmd-chip-flat {
+  @include cmd-chip-flat;
+}
+
+%cmd-label-active {
+  @include cmd-label-active;
+}
+
+%cmd-label-idle {
+  @include cmd-label-idle;
+}
+
+%cmd-focus-ring {
+  @include cmd-focus-ring;
+}

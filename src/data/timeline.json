@@ -1,0 +1,16 @@
+{
+  "entries": [
+    {
+      "year": "2024",
+      "title": "Design Intern",
+      "subtitle": "TYPEONE · London, UK",
+      "description": "Designed and deployed an immersive 3D-mapped environment for a featured museum exhibit. Used TouchDesigner for visual programming, spatial alignment, and large-scale projection hardware."
+    },
+    {
+      "year": "2021–2024",
+      "title": "BSc Games Design & Development",
+      "subtitle": "University of Greenwich",
+      "description": "Combined software engineering with player-centric design in Unity and C#—gameplay systems, editor tooling, and jam/capstone work. Extended into multiplayer client–server architecture, AWS-hosted dedicated servers, and VR (spatial UI, motion controls, performance). Class representative in first year."
+    }
+  ]
+}

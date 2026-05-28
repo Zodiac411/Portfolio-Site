@@ -1,0 +1,306 @@
+@use 'tokens';
+@use 'primitives' as *;
+@use 'background';
+@use 'panels';
+@use 'responsive';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  margin: 0;
+  width: 100%;
+  min-width: 100%;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+html {
+  overflow: hidden;
+  background: var(--field-blue);
+}
+
+body {
+  font-family: var(--font-panel);
+  color: var(--text-on-dark);
+  background: var(--field-blue);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+#root {
+  position: relative;
+  z-index: var(--z-shell);
+  height: 100vh;
+  height: 100dvh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: hidden;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+a {
+  color: var(--cyan);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+
+  &:hover {
+    color: var(--paper);
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+.shell-topbar {
+  display: none;
+}
+
+// Shell layout: _shell.scss (imported after global in main.tsx)
+
+.app-shell--section {
+  .sub-panel-host {
+    align-self: center;
+    max-height: 100%;
+  }
+}
+
+.app-shell--home .sub-panel-host__inner {
+  max-height: min(82dvh, 800px);
+}
+
+.menu-zone {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 0.5rem;
+  min-width: 0;
+  min-height: 0;
+  overflow: visible;
+  z-index: var(--z-menu);
+}
+
+@mixin scrollbar-hidden {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+    width: 0;
+    height: 0;
+    background: transparent;
+  }
+}
+
+.sub-panel-host {
+  position: relative;
+  z-index: var(--z-panel);
+  min-width: 0;
+  min-height: 0;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: auto;
+  overflow: hidden;
+  padding: 0.25rem 0 1rem;
+
+  &--home .sub-panel-host__inner {
+    padding-bottom: 2rem;
+  }
+
+  &--open {
+    overflow: hidden;
+  }
+}
+
+.sub-panel-host__inner {
+  width: 100%;
+  max-width: 100%;
+  max-height: min(88dvh, 960px);
+  overflow-x: hidden;
+  overflow-y: auto;
+  padding: 0.5rem 0.75rem 1.5rem;
+  margin-inline: auto;
+  @include scrollbar-command;
+}
+
+// Inner host carries panel-slab-host; keep scroll when panels load after global.
+.sub-panel-host__inner.panel-slab-host {
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.sub-panel-host--scroll {
+  align-self: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  max-height: 100%;
+  overflow: hidden;
+}
+
+.sub-panel-host--scroll .sub-panel-host__inner {
+  flex: 0 1 auto;
+  width: 100%;
+  max-height: min(88dvh, 100%);
+  min-height: 0;
+  overflow-y: auto;
+  padding-bottom: 2rem;
+
+  > * {
+    flex-shrink: 0;
+  }
+}
+
+.sub-panel-host--scroll.sub-panel-host--home .sub-panel-host__inner {
+  padding-bottom: 2.5rem;
+}
+
+.motion-toggle {
+  @extend %cmd-block-compact-ink;
+  @extend %cmd-focus-ring;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.35rem 0.65rem;
+  color: var(--text-muted);
+  font-family: var(--font-menu);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+
+  &[aria-pressed='true'] {
+    color: var(--paper);
+    border-color: var(--cyan);
+  }
+
+  &:hover {
+    border-color: var(--cyan);
+    color: var(--paper);
+  }
+}
+
+.motion-toggle__state {
+  color: var(--cyan);
+}
+
+@media (max-width: 767px) {
+  .shell-topbar {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.35rem;
+    grid-area: topbar;
+    padding-bottom: 0.25rem;
+    z-index: var(--z-shell);
+  }
+
+  .shell-topbar__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+  }
+
+  .shell-topbar__cmd {
+    display: flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.65rem;
+    margin: 0;
+    background: var(--panel-ink-bg);
+    border: 2px solid var(--cyan);
+    clip-path: var(--clip-slant-panel);
+    box-shadow: var(--shadow-block-ink-only);
+    font-family: var(--font-menu);
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--cyan);
+    flex-shrink: 0;
+  }
+
+  .shell-topbar__brand {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    min-width: 0;
+    padding-left: 0.15rem;
+  }
+
+  .shell-topbar__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--cyan);
+    flex-shrink: 0;
+  }
+
+  .shell-topbar__brand-text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.05rem;
+    min-width: 0;
+  }
+
+  .shell-topbar__name {
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--paper);
+  }
+
+  .shell-topbar__role {
+    font-size: 0.62rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    color: var(--cyan-dim);
+    line-height: 1.2;
+  }
+
+  .menu-zone {
+    justify-content: stretch;
+    align-items: stretch;
+    padding: 0;
+    overflow: visible;
+    align-self: stretch;
+  }
+
+  .menu-item {
+    --item-rotate: 0deg !important;
+    --item-offset-x: 0px !important;
+    --item-offset-y: 0px !important;
+  }
+}
+
+@media (min-width: 768px) {
+  .shell-topbar {
+    display: none;
+  }
+}

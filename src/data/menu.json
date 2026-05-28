@@ -1,0 +1,48 @@
+{
+  "items": [
+    {
+      "id": "home",
+      "label": "HOME",
+      "route": "/",
+      "cyan": 1,
+      "offsetX": -6,
+      "offsetY": 0,
+      "rotate": -1.5,
+      "actionHint": "Read bio",
+      "confirmHint": "View · Confirm"
+    },
+    {
+      "id": "projects",
+      "label": "PROJECTS",
+      "route": "/projects",
+      "cyan": 2,
+      "offsetX": 5,
+      "offsetY": 3,
+      "rotate": 0.8,
+      "actionHint": "Open repo",
+      "confirmHint": "View · Confirm"
+    },
+    {
+      "id": "resume",
+      "label": "RESUME",
+      "route": "/resume",
+      "cyan": 2,
+      "offsetX": -5,
+      "offsetY": 2,
+      "rotate": -1,
+      "actionHint": "Download",
+      "confirmHint": "View · Confirm"
+    },
+    {
+      "id": "contact",
+      "label": "CONTACT",
+      "route": "/contact",
+      "cyan": 3,
+      "offsetX": 4,
+      "offsetY": -2,
+      "rotate": 0.4,
+      "actionHint": "Send message",
+      "confirmHint": "View · Confirm"
+    }
+  ]
+}

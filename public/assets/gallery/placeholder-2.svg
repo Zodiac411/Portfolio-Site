@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#003a6e"/>
+  <ellipse cx="200" cy="200" rx="120" ry="40" fill="#16cffb" opacity="0.4"/>
+  <text x="200" y="80" text-anchor="middle" fill="#e8f7ff" font-family="sans-serif" font-size="18">Environment</text>
+</svg>
