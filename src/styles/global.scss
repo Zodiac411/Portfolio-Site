@@ -137,6 +137,8 @@ a {
   max-height: min(88dvh, 960px);
   overflow-x: hidden;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding: 0.5rem 0.75rem 1.5rem;
   margin-inline: auto;
   @include scrollbar-command;
@@ -164,6 +166,8 @@ a {
   max-height: min(88dvh, 100%);
   min-height: 0;
   overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
   padding-bottom: 2rem;
 
   > * {

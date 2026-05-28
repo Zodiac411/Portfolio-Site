@@ -343,6 +343,10 @@
   overflow-x: hidden;
 }
 
+.projects-panel-body {
+  overflow-y: visible;
+}
+
 .contact-socials {
   display: flex;
   flex-wrap: wrap;
