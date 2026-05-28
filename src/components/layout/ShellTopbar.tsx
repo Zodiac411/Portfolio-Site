@@ -1,6 +1,8 @@
 import siteData from '../../data/site.json'
 import { MotionToggle } from '../ui/MotionToggle'
 
+const profileImageSrc = `${import.meta.env.BASE_URL}assets/profile/chris-folorunso.png`
+
 export function ShellTopbar() {
   return (
     <header className="shell-topbar">
@@ -11,7 +13,7 @@ export function ShellTopbar() {
         <div className="shell-topbar__brand">
           <img
             className="shell-topbar__avatar"
-            src="/assets/profile/chris-folorunso.png"
+            src={profileImageSrc}
             alt=""
             width={40}
             height={40}

@@ -5,6 +5,8 @@ interface SideGlyphProps {
   className?: string
 }
 
+const profileImageSrc = `${import.meta.env.BASE_URL}assets/profile/chris-folorunso.png`
+
 export const SideGlyph = forwardRef<HTMLElement, SideGlyphProps>(function SideGlyph(
   { className = '' },
   ref
@@ -16,7 +18,7 @@ export const SideGlyph = forwardRef<HTMLElement, SideGlyphProps>(function SideGl
       <div className="telemetry-rail__inner">
         <img
           className="telemetry-rail__avatar"
-          src="/assets/profile/chris-folorunso.png"
+          src={profileImageSrc}
           alt={siteData.legalName}
           width={96}
           height={96}
